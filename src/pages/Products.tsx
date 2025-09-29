@@ -1,11 +1,43 @@
 import React, { useEffect } from 'react';
-import { useQuery } from 'convex/react';
-import { api } from '../../convex/_generated/api';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Award, Zap, CheckCircle, Star, Factory, Sparkles, Target, TrendingUp } from 'lucide-react';
 
 const Products = () => {
-  const products = useQuery(api.products.getProducts);
+  // Static products data
+  const products = [
+    {
+      _id: 1,
+      name: "Steel Billets",
+      category: "Raw Material",
+      description: "High-quality steel billets for industrial and construction applications.",
+      specifications: ["Grade: Fe500", "Length: 12m", "Width: 150mm", "Standard: BIS Certified"],
+      features: ["High Strength", "Corrosion Resistant", "Uniform Size"]
+    },
+    {
+      _id: 2,
+      name: "TMT Bars 550D",
+      category: "Construction Steel",
+      description: "Thermex® TMT bars designed for earthquake-resistant structures.",
+      specifications: ["Grade: Fe550D", "Length: 12m", "Diameter: 8-32mm", "BIS Certified"],
+      features: ["High Ductility", "Superior Tensile Strength", "Rust Resistant"]
+    },
+    {
+      _id: 3,
+      name: "CRS TMT Bars",
+      category: "Reinforcement Steel",
+      description: "Cold Rolled Steel TMT bars for premium construction projects.",
+      specifications: ["Grade: Fe500", "Length: 12m", "Diameter: 10-25mm", "BIS Certified"],
+      features: ["High Strength", "Flexible", "Corrosion Resistant"]
+    },
+    {
+      _id: 4,
+      name: "Industrial Grade Steel",
+      category: "Industrial Use",
+      description: "Steel suitable for manufacturing and heavy machinery applications.",
+      specifications: ["Grade: Fe500/550", "Customized Sizes Available", "ISO Certified"],
+      features: ["Durable", "Precision Rolled", "Reliable Performance"]
+    }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,17 +101,6 @@ const Products = () => {
       color: "bg-secondary-500"
     }
   ];
-
-  if (!products) {
-    return (
-      <div className="pt-20 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-neutral-600">Loading products...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="pt-20 page-transition">
@@ -170,10 +191,6 @@ const Products = () => {
                           {product.category}
                         </div>
                       </div>
-                    </div>
-                    <div className="absolute top-4 right-4 flex space-x-2">
-                      <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-                      <div className="w-2 h-2 bg-success-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                     </div>
                   </div>
 
