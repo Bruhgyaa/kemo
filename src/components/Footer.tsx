@@ -21,12 +21,12 @@ const Footer = () => {
 
   const certifications = [
     { icon: Award, text: 'BIS Certified', color: 'bg-accent-500' },
-    { icon: Shield, text: 'ISO 9001:2015', color: 'bg-secondary-500' },
-    { icon: Globe, text: 'Export Quality', color: 'bg-success-500' },
+    { icon: Shield, text: 'ISO 9001:2015', color: 'bg-accent-500' },
+    { icon: Globe, text: 'Export Quality', color: 'bg-accent-500' },
   ];
 
   return (
-    <footer className="bg-gradient-hero text-white relative overflow-hidden">
+    <footer className="bg-primary-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-accent-500 rounded-full blur-3xl animate-float"></div>
@@ -68,7 +68,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-xl font-bold font-display mb-8 flex items-center">
+              <h3 className="text-xl text-accent-400 font-bold font-display mb-8 flex items-center">
                 <Sparkles className="h-5 w-5 mr-3 text-accent-400" />
                 Quick Links
               </h3>
@@ -89,7 +89,7 @@ const Footer = () => {
 
             {/* Products */}
             <div>
-              <h3 className="text-xl font-bold font-display mb-8 flex items-center">
+              <h3 className="text-xl text-accent-400 font-bold font-display mb-8 flex items-center">
                 <Star className="h-5 w-5 mr-3 text-secondary-400" />
                 Our Products
               </h3>
@@ -102,17 +102,12 @@ const Footer = () => {
                 ))}
               </ul>
               
-              <div className="p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-400 hover-lift">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-accent-400 mb-2">25+</div>
-                  <div className="text-primary-200 text-sm font-medium">Years Experience</div>
-                </div>
-              </div>
+              
             </div>
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-xl font-bold font-display mb-8 flex items-center">
+              <h3 className="text-xl text-accent-400 font-bold font-display mb-8 flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-success-400" />
                 Contact Info
               </h3>
@@ -131,7 +126,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex items-center space-x-4 group hover-lift">
-                  <div className="w-12 h-12 bg-accent-500 rounded-xl flex items-center justify-center group-hover:bg-accent-400 transition-all duration-300 shadow-soft">
+                  <div className="w-12 h-12 bg-success-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-success-400 transition-all duration-300 shadow-soft">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -141,7 +136,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex items-center space-x-4 group hover-lift">
-                  <div className="w-12 h-12 bg-secondary-500 rounded-xl flex items-center justify-center group-hover:bg-secondary-400 transition-all duration-300 shadow-soft">
+                  <div className="w-12 h-12 bg-success-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-success-400 transition-all duration-300 shadow-soft">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -168,10 +163,7 @@ const Footer = () => {
                 <Link to="#" className="text-primary-200 hover:text-accent-400 transition-colors duration-300 hover-lift">
                   Terms of Service
                 </Link>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-accent-500 rounded-full animate-pulse shadow-sm"></div>
-                  <span className="text-primary-200 font-medium">Quality Assured</span>
-                </div>
+                
               </div>
             </div>
           </div>
