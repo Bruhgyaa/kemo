@@ -27,11 +27,10 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-large border-b border-neutral-100/50' 
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-lg shadow-large border-b border-neutral-100/50'
         : 'bg-white/95 backdrop-blur-lg shadow-large border-b border-neutral-100/50'
-    }`}>
+      }`}>
       {/* Main navigation */}
       <nav className="container-padding">
         <div className="flex justify-between items-center h-20">
@@ -56,11 +55,10 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 hover-lift ${
-                  isActive(item.href)
+                className={`relative px-6 py-3 text-sm font-semibold rounded-xl transition-all duration-300 hover-lift ${isActive(item.href)
                     ? 'text-primary-600 bg-primary-50 shadow-xs border border-primary-100'
                     : 'text-neutral-700 hover:text-primary-600 hover:bg-neutral-50'
-                }`}
+                  }`}
               >
                 {item.name}
                 {isActive(item.href) && (
@@ -68,14 +66,7 @@ const Header = () => {
                 )}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="ml-6 btn-primary group shadow-medium hover:shadow-glow-primary"
-            >
-              <Sparkles className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
-              Get Quote
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+
           </div>
 
           {/* Mobile menu button */}
@@ -97,27 +88,16 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-6 py-4 text-base font-semibold rounded-xl transition-all duration-300 hover-lift ${
-                    isActive(item.href)
+                  className={`block px-6 py-4 text-base font-semibold rounded-xl transition-all duration-300 hover-lift ${isActive(item.href)
                       ? 'text-primary-600 bg-primary-50 shadow-xs border border-primary-100'
                       : 'text-neutral-700 hover:text-primary-600 hover:bg-neutral-50'
-                  }`}
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-6 pt-4">
-                <Link
-                  to="/contact"
-                  className="btn-primary w-full justify-center shadow-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Sparkles className="mr-2 h-4 w-4" />
-                  Get Quote
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
+
             </div>
           </div>
         )}

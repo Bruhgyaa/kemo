@@ -152,9 +152,7 @@ const Home = () => {
                   Explore Products
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-                <Link to="/contact" className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary-600 shadow-medium">
-                  Get Quote
-                </Link>
+
               </div>
             </div>
 
@@ -333,10 +331,7 @@ const Home = () => {
               and discover how KEMO Steel can strengthen your next project with premium quality solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center">
-              <Link to="/contact" className="btn-accent group shadow-large hover:shadow-glow">
-                Get Quote Now
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+
               <Link to="/products" className="btn-secondary bg-white/10 border-white/30 text-white hover:bg-white hover:text-primary-600 shadow-medium">
                 View Products
               </Link>

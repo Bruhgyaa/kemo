@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Award, Zap, CheckCircle, Star, Factory, Sparkles, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, Shield, Award, Zap, CheckCircle, Star, Factory, Sparkles, Target, TrendingUp, Phone, Mail } from 'lucide-react';
 
 const Products = () => {
   // Static products data
@@ -122,7 +122,7 @@ const Products = () => {
               <span className="block text-gradient-vibrant">Excellence</span>
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
-              Discover our comprehensive range of premium steel products, manufactured with 
+              Discover our comprehensive range of premium steel products, manufactured with
               German Thermex® technology and certified to the highest international standards.
             </p>
           </div>
@@ -226,14 +226,28 @@ const Products = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <Link 
-                      to="/contact" 
-                      className="w-full btn-primary group shadow-medium hover:shadow-glow-primary"
-                    >
-                      <Star className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-                      Get Quote
-                      <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+                    {/* CTA Button */}
+                    <div className="space-y-4">
+                      <Link
+                        to="/contact"
+                        className="w-full btn-primary group shadow-medium hover:shadow-glow-primary justify-center"
+                      >
+                        <Star className="mr-3 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+                        Contact Us for Quote
+                        <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Link>
+
+                      <div className="flex flex-col space-y-2 text-sm text-neutral-600 pt-2 border-t border-neutral-100">
+                        <a href="tel:+917003357003" className="flex items-center hover:text-primary-600 transition-colors">
+                          <Phone className="h-4 w-4 mr-3 text-accent-500" />
+                          +91 7003357003
+                        </a>
+                        <a href="mailto:marketing@kemosteels.com" className="flex items-center hover:text-primary-600 transition-colors">
+                          <Mail className="h-4 w-4 mr-3 text-accent-500" />
+                          marketing@kemosteels.com
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -286,7 +300,7 @@ const Products = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-primary-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Get personalized recommendations and competitive quotes for your steel requirements. 
+              Get personalized recommendations and competitive quotes for your steel requirements.
               Our experts are ready to help you choose the perfect solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center">
